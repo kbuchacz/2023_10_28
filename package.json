@@ -1,0 +1,25 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "Interview task",
+  "main": "index.ts",
+  "scripts": {
+    "start:dev": "ts-node index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "author": "Krzysztof Buchacz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.4",
+    "@types/express": "^4.17.20",
+    "@types/ioredis": "^5.0.0",
+    "@types/node": "^20.8.9",
+    "typescript": "^5.2.2"
+  }
+}
