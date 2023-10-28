@@ -7,7 +7,7 @@ FROM node:alpine as build
 WORKDIR /app
 
 # Copy package.json and package-lock.json for npm ci command
-COPY package*.json ./
+COPY package*.json /app
 
 # Install dependencies
 RUN npm ci
