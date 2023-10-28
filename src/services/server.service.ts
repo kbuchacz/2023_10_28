@@ -1,5 +1,6 @@
 import bodyParser from 'body-parser';
 import express, { Express } from 'express';
+import { applicationRouter } from '../routes';
 
 export default class Server {
   private server: Express;
@@ -10,6 +11,7 @@ export default class Server {
     this.server.set('port', process.env.PORT || 3000);
     this.server.use(bodyParser.json());
     this.server.use(bodyParser.urlencoded({ extended: true }));
+    this.server.use(applicationRouter);
   }
 
   public init() {

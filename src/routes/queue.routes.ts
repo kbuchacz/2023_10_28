@@ -5,7 +5,7 @@ import { addMessageToQueueHandler } from '../controllers/queue.controller';
 const router = Router();
 
 // POST endpoint to add a message to the queue
-router.post('/api/:queue_name', async (req, res) => {
+router.post('/:queue_name', async (req, res) => {
   try {
     const { queue_name: queueName } = req.params;
     const message = req.body;
@@ -17,7 +17,7 @@ router.post('/api/:queue_name', async (req, res) => {
 });
 
 // GET endpoint to fetch the next message from the queue
-router.get('/api/:queue_name', async (req, res) => {
+router.get('/:queue_name', async (req, res) => {
   const { queue_name: queueName } = req.params;
   const timeout = req.query.timeout ? Number(req.query.timeout) : 10000; // default 10 seconds
 
