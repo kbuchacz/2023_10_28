@@ -1,4 +1,3 @@
-import { Request, Response } from 'express';
 import QueueService from '../services/queue.service';
 
 const queueService = new QueueService();
